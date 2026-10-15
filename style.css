@@ -9,8 +9,14 @@ body {
 
 header,
 .hero,
-footer {
+.footer {
   display: flex;
+  background-color: #1F2937;
+  color: #F9FAF8;
+}
+
+.dark-top,
+footer {
   background-color: #1F2937;
   color: #F9FAF8;
 }
@@ -35,14 +41,15 @@ header {
 .header-links {
   display: flex;
   list-style-type: none;
-  gap: 16px;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
 }
 
 .hero {
   align-items: flex-start;
   justify-content: space-between;
-  padding: 50px 200px;
-  margin-top: -0.5px;
+  padding: 100px 200px;
   gap: 50px;
 }
 
@@ -57,7 +64,7 @@ header {
 .hero-heading {
   font-size: 48px;
   font-weight: 900;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .hero-text {
@@ -65,13 +72,15 @@ header {
 }
 
 .button, 
-.cta {
+.cta-box {
   background-color: #3882F6;
   color: #F9FAF8;
 }
 
 .button {
   font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
   border: none;
   border-radius: 8px;
   padding: 8px 5px;
@@ -79,23 +88,24 @@ header {
   font-weight: bold;
 }
 
-.hero img{
+.hero img {
   width: 100%;
-  height: auto;
+  height: 240px;
   max-width: 520px;
+  object-fit: cover;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 100px;
+  padding: 50px 20px 120px;
 }
 
 .info h2 {
   text-align: center;
   margin: 0 0 40px;
+  font-size: 36px;
 }
-
 
 .info-cards {
   display: flex;
@@ -119,7 +129,8 @@ header {
 
 .card p {
   color: #4b5563;
-  margin-top: 8px;
+  margin: 8px 0 0;
+  font-size: 18px;
 }
 
 .quote {
@@ -130,6 +141,8 @@ header {
 
 .quote blockquote {
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
 
@@ -141,17 +154,47 @@ header {
 }
 
 .quote cite {
-  display: block;
-  text-align: right;
+  align-self: flex-end;
   padding-right: 30px;
-  margin-top: 10px;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
 }
 
+.cta-section {
+  padding: 100px 200px;
+}
+
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 120px;
+  border-radius: 8px;
+}
+
+.cta-text h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.cta-text p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.button-outline {
+  border: 2px solid #F9FAF8;
+  background-color: transparent;
+}
 
 footer {
+  display: flex;
+  font-size: 18px;
+  padding: 40px 0;
   justify-content: center;
-  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
